@@ -1,24 +1,26 @@
-  <ion-header-bar>
-    <h1 class="title">Create</h1>
-  </ion-header-bar>
-  <ion-content>
-    <div class="list">
-      <label class="item item-input">
-        <input type="text" placeholder="First Name">
-      </label>
-      <label class="item item-input">
-        <input type="text" placeholder="Last Name">
-      </label>
-      <label class="item item-input">
-        <textarea placeholder="Comments"></textarea>
-      </label>
-    </div>
-    <ion-list>
+<ion-view view-title="Create">
+    <ion-content>
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" placeholder="First Name">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name">
+        </label>
+        <label class="item item-input">
+          <textarea placeholder="Comments"></textarea>
+        </label>
+      </div>
+      <ion-list>
 
-      <ion-checkbox ng-model="filter.worker">Worker</ion-checkbox>
-      <ion-checkbox ng-model="filter.teamLeader">Team Leader</ion-checkbox>
+        <ion-checkbox ng-model="filter.worker">Worker</ion-checkbox>
+        <ion-checkbox ng-model="filter.teamLeader">Team Leader</ion-checkbox>
+
+        <button class="button button-positive" align="center">
+          Submit
+        </button>
 
 
-    </ion-list>
-  </ion-content>
-</ion-modal-view>
+      </ion-list>
+    </ion-content>
+  </ion-view>

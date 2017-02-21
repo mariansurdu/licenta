@@ -42,17 +42,17 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SettingsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
-  
 
-.controller("DataCtrl",function($scope){
+})
+  .controller('createController', function($scope) {
+
+  })
+
+  .controller('profileCtrl', function($scope) {
+
+  })
+
+
+  .controller("DataCtrl",function($scope){
   $scope.x="ok!";
 })

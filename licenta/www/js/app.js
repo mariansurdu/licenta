@@ -40,12 +40,22 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
-  .state('app.browse', {
-      url: '/browse',
+    .state('app.create', {
+      url: '/create',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/create.html',
+          controller:"createController"
+        }
+      }
+    })
+
+  .state('app.profile', {
+      url: '/profile',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/profile.html',
+          controller:'profileCtrl'
         }
       }
     })
