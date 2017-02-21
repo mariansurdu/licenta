@@ -1,10 +1,11 @@
 <ion-view view-title="Data">
   <ion-content>
-    {{x}}
-    <button class="button button-positive" align="center">
-      Welcome to data
-    </button>
-
-
+    <canvas id="bar" class="chart chart-bar"
+            chart-data="data" chart-labels="labels" chart-series="series">
+    </canvas>
+    <canvas id="line" class="chart chart-line" chart-data="data"
+            chart-labels="labels" chart-series="series" chart-options="options"
+            chart-dataset-override="datasetOverride" chart-click="onClick">
+    </canvas>
   </ion-content>
 </ion-view>
