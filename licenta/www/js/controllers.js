@@ -48,12 +48,54 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('profileCtrl', function($scope) {
+  .controller('profileCtrl', function($scope,$cordovaBluetoothLE) {
+
+    $scope.enable=function () {
+      document.addEventListener("deviceready", function () {
+        alert('x');
+        $cordovaBluetoothLE.initialize({request:true}).then(null,
+          function(obj) {
+            alert("x")
+            alert(JSON.stringify(obj));
+          },
+          function(obj) {
+            alert("y")
+            alert(JSON.stringify(obj));
+          }
+
+        )
+      }, false);
+    }
+
+        $scope.startScan=function(){
+      document.addEventListener("deviceready", function () {
+
+        $cordovaBluetoothLE.startScan({services:[]}).then(null,
+          function(obj) {
+            //Handle errors
+            alert(JSON.stringify(obj));
+          },
+          function(obj) {
+            if (obj.status == "scanResult")
+            {
+              alert(JSON.stringify(obj));
+            }
+            else if (obj.status == "scanStarted")
+            {
+              alert("scan started")
+              alert(JSON.stringify(obj));
+            }
+          }
+
+        );
+      }, false);
+    }
 
   })
 
 
   .controller("DataCtrl",function($scope,$cordovaBluetoothLE,$ionicPlatform){
+    alert("ctrl");
     $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
     $scope.series = ['Series A', 'Series B'];
 
@@ -63,11 +105,14 @@ angular.module('starter.controllers', [])
     ];
 
     $ionicPlatform.ready(function() {
+      alert("Ready")
       $cordovaBluetoothLE.initialize({request:true}).then(null,
         function(obj) {
+          alert("x")
           alert(JSON.stringify(obj));
         },
         function(obj) {
+          alert("y")
           alert(JSON.stringify(obj));
         }
 
@@ -75,7 +120,7 @@ angular.module('starter.controllers', [])
       $cordovaBluetoothLE.startScan({services:[]}).then(null,
         function(obj) {
           //Handle errors
-          console.log(obj.message);
+          alert(JSON.stringify(obj));
         },
         function(obj) {
           if (obj.status == "scanResult")
