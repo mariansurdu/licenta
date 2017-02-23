@@ -51,11 +51,21 @@ angular.module('starter', ['ionic', 'starter.controllers','chart.js','ngCordova'
     })
 
   .state('app.profile', {
-      url: '/profile',
+    url: '/profile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profile.html',
+        controller:'profileCtrl'
+      }
+    }
+  })
+
+    .state('app.functions', {
+      url: '/functions',
       views: {
         'menuContent': {
-          templateUrl: 'templates/profile.html',
-          controller:'profileCtrl'
+          templateUrl: 'templates/functions.html',
+          controller:'functionsCtrl'
         }
       }
     })

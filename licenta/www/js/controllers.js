@@ -48,7 +48,11 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('profileCtrl', function($scope,$cordovaBluetoothLE) {
+  .controller("profileCtrl",function($scope){
+
+  })
+
+  .controller('functionsCtrl', function($scope,$cordovaBluetoothLE) {
 
     $scope.enable=function () {
       document.addEventListener("deviceready", function () {
@@ -94,18 +98,35 @@ angular.module('starter.controllers', [])
   })
 
 
-  .controller("DataCtrl",function($scope,$cordovaBluetoothLE,$ionicPlatform){
-    alert("ctrl");
-    $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  .controller("DataCtrl",function($scope,$cordovaBluetoothLE,$ionicPlatform,$interval){
+    //alert("ctrl");
+    $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012','2006', '2007', '2008', '2009', '2010', '2011', '2012'];
     $scope.series = ['Series A', 'Series B'];
+    for (var a=[],i=0;i<40;++i) a[i]=i;
+
+// http://stackoverflow.com/questions/962802#962890
+    function shuffle(array) {
+      var tmp, current, top = array.length;
+      if(top) while(--top) {
+        current = Math.floor(Math.random() * (top + 1));
+        tmp = array[current];
+        array[current] = array[top];
+        array[top] = tmp;
+      }
+      return array;
+    }
+
+    $interval(function(){
+      a = shuffle(a);
+    },500)
 
     $scope.data = [
-      [65, 59, 80, 81, 56, 55, 40],
-      [28, 48, 40, 19, 86, 27, 90]
+      a,
+      a
     ];
 
     $ionicPlatform.ready(function() {
-      alert("Ready")
+     // alert("Ready")
       $cordovaBluetoothLE.initialize({request:true}).then(null,
         function(obj) {
           alert("x")
