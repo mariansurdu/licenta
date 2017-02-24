@@ -88,6 +88,15 @@ angular.module('starter', ['ionic', 'starter.controllers','chart.js','ngCordova'
         }
       }
     })
+    .state('app.planning', {
+      url: '/planning',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/planning.html',
+          controller: 'PlaninngCtrl'
+        }
+      }
+    })
 
 
   // if none of the above states are matched, use this as the fallback
