@@ -93,7 +93,7 @@ angular.module('starter', ['ionic', 'starter.controllers','chart.js','ngCordova'
       views: {
         'menuContent': {
           templateUrl: 'templates/planning.html',
-          controller: 'PlaninngCtrl'
+          controller: 'PlanningCtrl'
         }
       }
     })

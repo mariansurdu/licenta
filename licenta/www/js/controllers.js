@@ -52,6 +52,10 @@ angular.module('starter.controllers', [])
 
   })
 
+  .controller("PlanningCtrl",function($scope){
+
+  })
+
   .controller('functionsCtrl', function($scope,$cordovaBluetoothLE) {
 
     $scope.enable=function () {
