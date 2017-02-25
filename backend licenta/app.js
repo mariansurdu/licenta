@@ -5,11 +5,19 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
+var mongoose = require('mongoose');
+var fs=require("fs");
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+app.use(express.static(__dirname + '/db'));
+var modelsPath = path.join(__dirname, 'db');
+fs.readdirSync(modelsPath).forEach(function(file) {
+    require(modelsPath + '/' + file);
+});
+var User=mongoose.model("User");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,11 +51,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-MongoClient.connect("mongodb://marian:marian@ds161039.mlab.com:61039/licenta", function(err, db) {
-    if(!err) {
-        console.log("We are connected");
-    }
-});
-
+mongoose.connect('mongodb://marian:marian@ds161039.mlab.com:61039/licenta');
+console.log("aa")
 module.exports = app;
