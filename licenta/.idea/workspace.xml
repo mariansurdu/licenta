@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="639b2f58-0839-4855-9707-7fd0507ada54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../backend licenta/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Readme.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/controllers.js" afterPath="$PROJECT_DIR$/www/js/controllers.js" />
     </list>
     <ignored path="licenta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -650,7 +647,7 @@
       <workItem from="1487700203300" duration="9214000" />
       <workItem from="1487881528746" duration="5044000" />
       <workItem from="1488029060954" duration="1124000" />
-      <workItem from="1488039658160" duration="4398000" />
+      <workItem from="1488039658160" duration="4447000" />
     </task>
     <task id="LOCAL-00001" summary="Idea add">
       <created>1486672802945</created>
@@ -729,11 +726,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488029926986</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added backend">
+      <created>1488048569349</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1488048569349</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23663000" />
+    <option name="totallyTimeSpent" value="23712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -795,7 +799,8 @@
     <MESSAGE value="Some tests" />
     <MESSAGE value="Enable and find devices" />
     <MESSAGE value="Steps :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Steps :)" />
+    <MESSAGE value="Added backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
